@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XNEMA - Streaming Premium</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff7b00;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23b347d9;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23grad)' /%3E%3Ctext x='16' y='22' font-family='Arial, sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='%23000000'%3EX%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- Meta tags para SEO -->
+    <meta
+      name="description"
+      content="XNEMA - A nova era do streaming. Séries exclusivas, filmes originais e conteúdo premium."
+    />
+    <meta
+      name="keywords"
+      content="streaming, filmes, séries, Brasil, XNEMA, premium, Between Heaven and Hell"
+    />
+    <meta name="author" content="XNEMA Team" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="XNEMA - Streaming Premium" />
+    <meta
+      property="og:description"
+      content="A nova era do streaming. Séries exclusivas, filmes originais e conteúdo premium."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="XNEMA" />
+
+    <!-- Google tag (gtag.js) -->
+    <script>
+      (function () {
+        try {
+          var originalWarn = console.warn.bind(console);
+          var originalError = console.error.bind(console);
+          var shouldSuppress = function () {
+            var full = Array.prototype.slice.call(arguments)
+              .map(function (v) {
+                if (typeof v === 'string') return v;
+                try { return (v && v.toString) ? String(v.toString()) : ''; } catch (e) { return ''; }
+              })
+              .join(' ');
+            if (!full) return false;
+            return full.indexOf('defaultProps will be removed') !== -1 ||
+                   full.indexOf('Support for defaultProps will be removed from function components') !== -1;
+          };
+          console.warn = function () {
+            if (shouldSuppress.apply(null, arguments)) return;
+            return originalWarn.apply(console, arguments);
+          };
+          console.error = function () {
+            if (shouldSuppress.apply(null, arguments)) return;
+            return originalError.apply(console, arguments);
+          };
+        } catch (e) {
+          // fail open: if something goes wrong, keep default console behavior
+        }
+      })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMZQ1MHE5G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FMZQ1MHE5G');
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="module" src="/client/App.tsx"></script>
+  </body>
+</html>

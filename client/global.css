@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 3s ease infinite;
+}
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 221 22% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 221 25% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 221 25% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 14 100% 57%;
+    --primary-foreground: 0 0% 2%;
+
+    --secondary: 221 25% 12%;
+    --secondary-foreground: 0 0% 88%;
+
+    --muted: 221 20% 14%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 2%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 221 20% 18%;
+    --input: 221 20% 18%;
+    --ring: 14 100% 57%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 221 25% 9%;
+    --sidebar-foreground: 0 0% 88%;
+    --sidebar-primary: 14 100% 57%;
+    --sidebar-primary-foreground: 0 0% 2%;
+    --sidebar-accent: 221 20% 14%;
+    --sidebar-accent-foreground: 0 0% 88%;
+    --sidebar-border: 221 20% 18%;
+    --sidebar-ring: 14 100% 57%;
+
+    /* XNEMA Custom Variables */
+    --xnema-orange: 14 100% 57%;
+    --xnema-purple: 280 100% 70%;
+    --xnema-dark: 221 22% 8%;
+    --xnema-surface: 221 25% 10%;
+    --xnema-border: 221 20% 18%;
+  }
+
+  .dark {
+    --background: 221 22% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 221 25% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 221 25% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 14 100% 57%;
+    --primary-foreground: 0 0% 2%;
+
+    --secondary: 221 25% 10%;
+    --secondary-foreground: 0 0% 88%;
+
+    --muted: 221 20% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 2%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 221 20% 15%;
+    --input: 221 20% 15%;
+    --ring: 14 100% 57%;
+    --sidebar-background: 221 25% 7%;
+    --sidebar-foreground: 0 0% 88%;
+    --sidebar-primary: 14 100% 57%;
+    --sidebar-primary-foreground: 0 0% 2%;
+    --sidebar-accent: 221 20% 12%;
+    --sidebar-accent-foreground: 0 0% 88%;
+    --sidebar-border: 221 20% 15%;
+    --sidebar-ring: 14 100% 57%;
+
+    /* XNEMA Custom Variables */
+    --xnema-orange: 14 100% 57%;
+    --xnema-purple: 280 100% 70%;
+    --xnema-dark: 221 22% 6%;
+    --xnema-surface: 221 25% 8%;
+    --xnema-border: 221 20% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
